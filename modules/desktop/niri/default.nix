@@ -22,7 +22,7 @@ in
   # START OF CONFIG
   # =====================================================================
     programs.niri.enable = true;
-
+    # systemd.user.services.niri.wants = [ "awww-daemon.service" ];
 
     services.gnome.gcr-ssh-agent.enable = true;
     services.gnome.gnome-keyring.enable = true;
@@ -46,6 +46,7 @@ in
       awww
       swaynotificationcenter
       hyprlock
+      networkmanagerapplet
       hypridle
       polkit_gnome
 
