@@ -22,4 +22,5 @@
     # Programs
     # cisco-packet-tracer_9
   ];
+  programs.direnv.enable = true;
 }

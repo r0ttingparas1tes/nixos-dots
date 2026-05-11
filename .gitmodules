@@ -1,0 +1,3 @@
+[submodule "dotfiles"]
+	path = dotfiles
+	url = git@codeberg.org:r0tting_paras1tes/dotfiles.git

@@ -1,19 +1,20 @@
 { config, pkgs, ... }:
 
 {
-  systemd.user.services.awww-daemon = {
-    description = "Runs AWWW Daemon for wallpapers";
+systemd.user.services.awww-daemon = {
+  description = "AWWW wallpaper daemon";
 
-    after = [ "graphical-session.target" ];
-    partOf = [ "graphical-session.target" ];
-    # path= [ pkgs.awww ];
+  wantedBy = [ "graphical-session.target" ];
+  after = [ "graphical-session.target" ];
 
-    serviceConfig = {
-      ExecStart = "${pkgs.awww}/bin/awww-daemon";
-      Restart = "on-failure";
-      Environment = [
-        "PATH=${pkgs.awww}/bin:/run/current-system/sw/bin"
-      ];
-    };
+  path = [
+    pkgs.awww
+    pkgs.coreutils
+  ];
+
+  serviceConfig = {
+    ExecStart = "${pkgs.awww}/bin/awww-daemon";
+    Restart = "on-failure";
   };
+};
 }

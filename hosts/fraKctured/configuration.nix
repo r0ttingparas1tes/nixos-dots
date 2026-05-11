@@ -1,10 +1,9 @@
 { config, lib, pkgs, inputs, ... }:
 
 {
-  imports =
-    [
-      ./hardware-configuration.nix
-    ];
+  imports = [
+    ./hardware-configuration.nix
+  ];
   myDesktop.niri.enable = true;
   myDesktop.apps.enable = true;
   myDesktop.cleaning.enable = true;
@@ -39,7 +38,6 @@
     useXkbConfig = true;
   };
 
-
   # Disable the X11 windowing system.
   services.xserver.enable = false;
   services.tuned.enable = true;
@@ -70,6 +68,7 @@
     extraGroups = [ "wheel" "networkmanager" ];
     packages = with pkgs; [
       tree
+      kdePackages.dolphin
     ];
   };
 
@@ -90,14 +89,13 @@
     libayatana-appindicator
   ];
 
-
   services.openssh.enable = true;
 
   networking.firewall.allowedTCPPorts = [ 22 ];
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
 
-  system.stateVersion = "25.05";
+  system.stateVersion = "25.11";
 
 }
 
