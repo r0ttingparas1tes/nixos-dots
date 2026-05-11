@@ -31,8 +31,13 @@ in
       })
     ];
     environment.systemPackages = with pkgs; [
-      javaPackages.compiler.temurin-bin.jre-17
-      prismlauncher
+      (prismlauncher.override {
+        jdks = [
+          temurin-jre-bin
+          temurin-jre-bin-17
+          temurin-jre-bin-8
+        ];
+      })
       steam-run
       vulkan-tools
       mangohud

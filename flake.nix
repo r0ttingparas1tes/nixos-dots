@@ -17,6 +17,8 @@
         inherit system;
         modules = [
           ./hosts/thraK/configuration.nix
+	  ./modules/desktop
+	  ./modules/dev
         ];
         specialArgs = {
           inherit inputs;

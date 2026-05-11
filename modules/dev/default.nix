@@ -20,6 +20,6 @@
     # Editor
     vscode
     # Programs
-    cisco-packet-tracer_9
+    # cisco-packet-tracer_9
   ];
 }
