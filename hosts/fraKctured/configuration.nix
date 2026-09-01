@@ -35,6 +35,7 @@
     };
   };
   console = {
+    font = "Lat2-Terminus16";
     useXkbConfig = true;
   };
 
@@ -44,7 +45,7 @@
   services.power-profiles-daemon.enable = false;
 
   # Enable the GNOME Desktop Environment.
-  services.displayManager.gdm.enable = true;
+  services.displayManager.ly.enable = true;
   services.desktopManager.gnome.enable = true;
   services.desktopManager.gnome.extraGSettingsOverrides = ''
   [org.gnome.mutter]
@@ -95,7 +96,7 @@
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
 
-  system.stateVersion = "25.11";
+  system.stateVersion = "26.05";
 
 }
 

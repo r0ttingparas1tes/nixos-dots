@@ -1,3 +1,4 @@
 [submodule "dotfiles"]
 	path = dotfiles
-	url = git@codeberg.org:r0tting_paras1tes/dotfiles.git
+	url = ssh://git@codeberg.org/r0ttingparas1tes/dotfiles.git
+	branch = main

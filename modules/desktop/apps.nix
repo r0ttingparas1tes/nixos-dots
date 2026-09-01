@@ -53,10 +53,7 @@ in
 
       # Misc
       onlyoffice-desktopeditors
-      (discord.override {
-        withOpenASAR = true;
-        withVencord = true;
-      })
+      discord
       qbittorrent
     ];
 
