@@ -17,6 +17,7 @@ let
     yazi = "yazi";
     zsh = "zsh";
     "starship.toml" = "starship.toml";
+    "hyfetch.json" = "hyfetch.json";
   };
   homeConfigs = {
     ".bash_profile" = ".bash_profile";
