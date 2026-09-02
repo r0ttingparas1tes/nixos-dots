@@ -52,7 +52,7 @@
     pulse.enable = true;
   };
 
-  users.users.jazmin = {
+  users.users.jazz = {
     isNormalUser = true;
     extraGroups = [ "wheel" "audio" "gamemode" "video" "render" ]; # Enable ‘sudo’ for the user.
     packages = with pkgs; [

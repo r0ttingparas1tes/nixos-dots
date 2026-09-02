@@ -23,6 +23,16 @@
           ./hosts/thraK/configuration.nix
 	  ./modules/desktop
 	  ./modules/dev
+	  home-manager.nixosModules.home-manager
+	  {
+	    home-manager = {
+	      useGlobalPkgs = true;
+	      useUserPackages = true;
+	      extraSpecialArgs = { inherit inputs; };
+	      users.jazz = ./hosts/thraK/home;
+	      backupFileExtension = "backup";
+	    };
+	  }
         ];
         specialArgs = {
           inherit inputs;
@@ -42,7 +52,7 @@
 	      useGlobalPkgs = true;
 	      useUserPackages = true;
 	      extraSpecialArgs = { inherit inputs; };
-	      users.jazz = ./hosts/fraKctured/home; # it has a default.nix
+	      users.jazz = ./hosts/fraKctured/home;
 	      backupFileExtension = "backup";
 	    };
 	  }
